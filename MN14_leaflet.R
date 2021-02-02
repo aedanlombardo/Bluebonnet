@@ -7,7 +7,7 @@ library(tigris) # for census shapefiles
 library(htmltools)
 
 # Need Thunderforest key to use their basemaps
-TF_API_KEY <- 'd0ae1dd235b346c2b873a7d371502ac7'
+TF_API_KEY <- Sys.getenv("THUNDERFOREST_KEY")
 
 # Get shapefiles for census tracts, bgs and zipcodes and for district 14 and precincts 
 mnbg <- block_groups("27", county = c('009', '141', '145'), class='sf')
